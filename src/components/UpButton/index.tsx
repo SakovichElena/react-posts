@@ -1,4 +1,4 @@
-// import { ArrowCircleUp } from "@mui/icons-material";
+import { ArrowCircleUp } from "@mui/icons-material";
 import styled from "styled-components";
 import { useScroll } from "../../hooks/useScroll";
 import { CommonButton } from "../CommonButton";
@@ -12,16 +12,16 @@ const StyledUpButton = styled(CommonButton)`
   height: 50px;
 `;
 
-// export const UpButton = ({ observableRef }) => {
-//   const { scrollY, scrollToTop } = useScroll(observableRef);
+export const UpButton = ({ observableRef }) => {
+  const { scrollY, scrollToTop } = useScroll(observableRef);
 
-//   if (scrollY < 400) {
-//     return null;
-//   }
+  if (scrollY < 400) {
+    return null;
+  }
 
-//   return (
-//     <StyledUpButton onClick={scrollToTop}>
-//       <ArrowCircleUp />
-//     </StyledUpButton>
-//   );
-// };
+  return (
+    <StyledUpButton onClick={scrollToTop}>
+      <ArrowCircleUp />
+    </StyledUpButton>
+  );
+};
